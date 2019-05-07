@@ -1,0 +1,237 @@
+{
+    "title": "Consumer Surveys",
+    "description": "Creates and conducts surveys, lists the surveys that an authenticated user owns, and retrieves survey results and information about specified surveys.",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/googleapis.com/consumersurveys/v2/swagger.json",
+    "envVars": {
+        "OAUTH_CLIENT_ID": {
+            "description": "OAuth Client ID"
+        },
+        "OAUTH_CLIENT_SECRET": {
+            "description": "OAuth Client Secret"
+        }
+    },
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://www.googleapis.com/consumersurveys/v2",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            },
+            "Oauth2": {
+                "label": "Oauth 2.0 authentication",
+                "viewClass": "OAuthFieldView"
+            }
+        },
+        "oauth2": {
+            "client_id": "{{OAUTH_CLIENT_ID}}",
+            "client_secret": "{{OAUTH_CLIENT_SECRET}}",
+            "auth_uri": "https://accounts.google.com/o/oauth2/auth"
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "consumersurveys_mobileapppanels_list": {
+            "main": "./lib/actions/consumersurveys_mobileapppanels_list.js",
+            "title": "Lists the MobileAppPanels available to the authenticated user.",
+            "description": "Lists the MobileAppPanels available to the authenticated user.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/consumersurveys_mobileapppanels_list.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "consumersurveys_mobileapppanels_get": {
+            "main": "./lib/actions/consumersurveys_mobileapppanels_get.js",
+            "title": "Retrieves a MobileAppPanel that is available to the authenticated user.",
+            "description": "Retrieves a MobileAppPanel that is available to the authenticated user.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/consumersurveys_mobileapppanels_get.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "consumersurveys_mobileapppanels_update": {
+            "main": "./lib/actions/consumersurveys_mobileapppanels_update.js",
+            "title": "Updates a MobileAppPanel. Currently the only property that can be updated is the owners property.",
+            "description": "Updates a MobileAppPanel. Currently the only property that can be updated is the owners property.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/consumersurveys_mobileapppanels_update.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "consumersurveys_surveys_list": {
+            "main": "./lib/actions/consumersurveys_surveys_list.js",
+            "title": "Lists the surveys owned by the authenticated user.",
+            "description": "Lists the surveys owned by the authenticated user.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/consumersurveys_surveys_list.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "consumersurveys_surveys_insert": {
+            "main": "./lib/actions/consumersurveys_surveys_insert.js",
+            "title": "Creates a survey.",
+            "description": "Creates a survey.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/consumersurveys_surveys_insert.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "consumersurveys_surveys_start": {
+            "main": "./lib/actions/consumersurveys_surveys_start.js",
+            "title": "Begins running a survey.",
+            "description": "Begins running a survey.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/consumersurveys_surveys_start.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "consumersurveys_surveys_stop": {
+            "main": "./lib/actions/consumersurveys_surveys_stop.js",
+            "title": "Stops a running survey.",
+            "description": "Stops a running survey.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/consumersurveys_surveys_stop.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "consumersurveys_surveys_delete": {
+            "main": "./lib/actions/consumersurveys_surveys_delete.js",
+            "title": "Removes a survey from view in all user GET requests.",
+            "description": "Removes a survey from view in all user GET requests.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/consumersurveys_surveys_delete.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "consumersurveys_surveys_get": {
+            "main": "./lib/actions/consumersurveys_surveys_get.js",
+            "title": "Retrieves information about the specified survey.",
+            "description": "Retrieves information about the specified survey.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/consumersurveys_surveys_get.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "consumersurveys_surveys_update": {
+            "main": "./lib/actions/consumersurveys_surveys_update.js",
+            "title": "Updates a survey. Currently the only property that can be updated is the owners property.",
+            "description": "Updates a survey. Currently the only property that can be updated is the owners property.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/consumersurveys_surveys_update.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "consumersurveys_results_get": {
+            "main": "./lib/actions/consumersurveys_results_get.js",
+            "title": "Retrieves any survey results that have been produced so far. Results are formatted as an Excel file. You must add \"?alt=media\" to the URL as an argument to get results.",
+            "description": "Retrieves any survey results that have been produced so far. Results are formatted as an Excel file. You must add \"?alt=media\" to the URL as an argument to get results.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/consumersurveys_results_get.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

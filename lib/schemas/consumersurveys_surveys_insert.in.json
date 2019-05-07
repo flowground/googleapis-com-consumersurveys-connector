@@ -1,0 +1,211 @@
+{
+    "type": "object",
+    "properties": {
+        "alt": {
+            "type": "string",
+            "enum": [
+                "json"
+            ],
+            "default": "json"
+        },
+        "fields": {
+            "type": "string"
+        },
+        "key": {
+            "type": "string"
+        },
+        "oauth_token": {
+            "type": "string"
+        },
+        "prettyPrint": {
+            "type": "boolean",
+            "default": true
+        },
+        "quotaUser": {
+            "type": "string"
+        },
+        "userIp": {
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "audience": {
+                    "properties": {
+                        "ages": {
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        "country": {
+                            "type": "string"
+                        },
+                        "countrySubdivision": {
+                            "type": "string"
+                        },
+                        "gender": {
+                            "type": "string"
+                        },
+                        "languages": {
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        "mobileAppPanelId": {
+                            "type": "string"
+                        },
+                        "populationSource": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "cost": {
+                    "properties": {
+                        "costPerResponseNanos": {
+                            "format": "int64",
+                            "type": "string"
+                        },
+                        "currencyCode": {
+                            "type": "string"
+                        },
+                        "maxCostPerResponseNanos": {
+                            "format": "int64",
+                            "type": "string"
+                        },
+                        "nanos": {
+                            "format": "int64",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "customerData": {
+                    "format": "byte",
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "owners": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "questions": {
+                    "items": {
+                        "properties": {
+                            "answerOrder": {
+                                "type": "string"
+                            },
+                            "answers": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            "hasOther": {
+                                "type": "boolean"
+                            },
+                            "highValueLabel": {
+                                "type": "string"
+                            },
+                            "images": {
+                                "items": {
+                                    "properties": {
+                                        "altText": {
+                                            "type": "string"
+                                        },
+                                        "data": {
+                                            "format": "byte",
+                                            "type": "string"
+                                        },
+                                        "url": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "type": "array"
+                            },
+                            "lastAnswerPositionPinned": {
+                                "type": "boolean"
+                            },
+                            "lowValueLabel": {
+                                "type": "string"
+                            },
+                            "mustPickSuggestion": {
+                                "type": "boolean"
+                            },
+                            "numStars": {
+                                "type": "string"
+                            },
+                            "openTextPlaceholder": {
+                                "type": "string"
+                            },
+                            "openTextSuggestions": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            "question": {
+                                "type": "string"
+                            },
+                            "sentimentText": {
+                                "type": "string"
+                            },
+                            "singleLineResponse": {
+                                "type": "boolean"
+                            },
+                            "thresholdAnswers": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            "type": {
+                                "type": "string"
+                            },
+                            "unitOfMeasurementLabel": {
+                                "type": "string"
+                            },
+                            "videoId": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "rejectionReason": {
+                    "properties": {
+                        "explanation": {
+                            "type": "string"
+                        },
+                        "type": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "surveyUrlId": {
+                    "type": "string"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "wantedResponseCount": {
+                    "format": "int32",
+                    "type": "integer"
+                }
+            },
+            "type": "object"
+        }
+    }
+}
